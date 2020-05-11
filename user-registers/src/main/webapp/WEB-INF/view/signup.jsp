@@ -6,12 +6,12 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Register</title>
+<title>Signup</title>
 </head>
 <body>
-	<h2>Register Here</h2>
+	<h2>Signup</h2>
 	${error }
-	<form:form method="POST" action="/submitForm"
+	<form:form method="POST" action="submitForm"
 		modelAttribute="userbean">
 		<form:label path="firstName">First Name</form:label>
 		<form:input path="firstName" /><br>

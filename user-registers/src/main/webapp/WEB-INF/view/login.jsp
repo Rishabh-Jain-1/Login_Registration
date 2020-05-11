@@ -5,11 +5,14 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Login</title>
 </head>
 <body>
-${bad }
+
+<h2>${success }</h2>
 <h2>Login</h2>
+<h3>${bad }</h3>
+
 <form:form method="POST" action="validateUser" modelAttribute="userbean">
 <form:label path="email">Email</form:label>
 <form:input path="email"/><br>

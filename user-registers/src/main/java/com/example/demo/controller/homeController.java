@@ -20,7 +20,7 @@ public class homeController {
 	@Autowired
 	UsersRepo usersrepo;
 
-	@RequestMapping({ "/home", "/" })
+	@RequestMapping({ "home", "/" })
 	public String home() {
 		return "home";
 	}
@@ -31,13 +31,13 @@ public class homeController {
 		return "signup";
 	}
 
-	@RequestMapping("/submitForm")
+	@RequestMapping("submitForm")
 	public String validateForm(@Valid @ModelAttribute("userbean") UserBean userbean, BindingResult bindingresult,
 			Model m) {
 
 		if (bindingresult.hasErrors()) {
 			m.addAttribute("error", "Please Insert correct Details");
-			return "register";
+			return "signup";
 		}
 
 		usersrepo.save(userbean);
@@ -61,16 +61,23 @@ public class homeController {
 				m.addAttribute("email", userbean.getEmail());
 				return "Dummy";
 			} else {
-				m.addAttribute("bad", "Bad Credentials");
+				m.addAttribute("bad", "Bad Credentials!");
 				return "login";
 			}
 		} else {
-			m.addAttribute("bad", "User Not Found");
+			m.addAttribute("bad", "User Not Found!");
 			return "login";
 		}
 
 	}
-	@RequestMapping("/dummy")
+	@RequestMapping(value = "logout")
+	public String logout(HttpServletRequest req,Model m) {
+		req.getSession().invalidate();
+		m.addAttribute("success","Logout Successful");
+		
+		return "home";
+	}
+	@RequestMapping("dummy")
 	public String getUser(HttpSession session, Model m) {
 		String user= (String) session.getAttribute("user");
 		try {
@@ -85,10 +92,6 @@ public class homeController {
 		return "sessionExpired";
 	}
 	}
-	@RequestMapping("/logout")
-	public String logout(HttpServletRequest req) {
-		req.getSession().invalidate();
-		return "login";
-	}
+	
 
 }

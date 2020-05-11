@@ -4,14 +4,16 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Home</title>
 </head>
 <body>
-${success}
+<h2>${success}</h2>
+
 <form action="login">
 <input type="submit" value="Login">
 
 </form>
+</br>
 <form action="signup">
 <input type="submit" value="Signup">
 

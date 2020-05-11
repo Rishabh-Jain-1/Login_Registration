@@ -4,14 +4,14 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Dummy</title>
 </head>
 <body>
-Welcome ${df }
+Welcome ${email}
 </br>
 
-<form action="logout">
-<input type="button" value="Logout">
+<form action="logout" >
+<input type="submit" value="Logout">
 </form>
 </body>
 </html>
