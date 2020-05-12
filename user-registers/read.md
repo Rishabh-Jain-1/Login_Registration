@@ -23,7 +23,7 @@
 
 ** 2.Signup API:
 "http://localhost:8090/signup"
-![](Screenshots/signup.png)
+![](Screenshots/Signup.png)
 
 ** 3.Login API
 "http://localhost:8090/login"
@@ -31,7 +31,7 @@
 
 ** 4.Dummy API
 "http://localhost:8090/dummy"
-![](Screenshots/dummy.png)
+![](Screenshots/Dummy.png)
 
 ** 5.Logout page API
 "http://localhost:8090/logout"
